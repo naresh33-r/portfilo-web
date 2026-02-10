@@ -1,13 +1,12 @@
-import { motion } from "framer-motion";
 import PageTransition from "@/components/PageTransition";
 import ScrollReveal from "@/components/ScrollReveal";
+import ProfilePhoto from "@/components/ProfilePhoto";
 
 const timeline = [
-  { year: "2021", title: "Started CSE Degree", description: "Began the journey into Computer Science & Engineering." },
-  { year: "2022", title: "First Internship", description: "Built REST APIs and learned agile development workflows." },
-  { year: "2023", title: "Open Source Contributions", description: "Contributed to multiple open-source React projects." },
-  { year: "2024", title: "Full-Stack Projects", description: "Developed end-to-end applications with modern tech stacks." },
-  { year: "2025", title: "Final Year & Job Ready", description: "Completing degree while building production-grade applications." },
+  { year: "2023", title: "Started CSE Degree", description: "Began the journey into Computer Science & Engineering." },
+  { year: "2024", title: "Problem Solving ", description: "Solved 300+ Data Structures and Algorithms problems on platforms like LeetCode andfocusing on arrays, strings, recursion, linked lists, stacks and queues.Improved problem-solving speed and optimized solutions from O(n²) to O(n log n) in multiple cases. " },
+  { year: "2025", title: "Full-Stack Projects", description: "Developed end-to-end applications with modern tech stacks." },
+  { year: "2026", title: "Final Year & Job Ready", description: "Completing degree while building production-grade applications." },
 ];
 
 const About = () => {
@@ -25,14 +24,18 @@ const About = () => {
             </div>
           </ScrollReveal>
 
+          {/* Profile Photo */}
+          <ScrollReveal delay={0.05}>
+            <div className="mb-16">
+              <ProfilePhoto imageSrc="IMG-20250510-WA0013.jpg" alt="Profile" />
+            </div>
+          </ScrollReveal>
+
           {/* Bio */}
           <ScrollReveal delay={0.1}>
             <div className="glass rounded-2xl p-8 md:p-12 mb-16 max-w-3xl mx-auto gradient-border">
               <p className="text-foreground/90 leading-relaxed text-lg">
-                I'm a final-year Computer Science student with a deep passion for building modern web applications.
-                I specialize in React, TypeScript, and Java, and I enjoy exploring everything from frontend animations
-                to backend microservices. When I'm not coding, you'll find me solving problems on LeetCode or
-                contributing to open-source projects.
+                I am a final-year Computer Science student focused on backend development using Java and Spring Boot. I have a strong foundation in OOP, Data Structures, and SQL, and I enjoy building scalable and structured applications.
               </p>
             </div>
           </ScrollReveal>

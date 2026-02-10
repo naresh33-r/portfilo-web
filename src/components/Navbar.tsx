@@ -11,6 +11,7 @@ const links = [
   { to: "/articles", label: "Articles" },
   { to: "/profiles", label: "Profiles" },
   { to: "/contact", label: "Contact" },
+  { to: "/naresh R.pdf", label: "Resume", external: true },
 ];
 
 const Navbar = () => {
@@ -27,22 +28,34 @@ const Navbar = () => {
 
           {/* Desktop */}
           <div className="hidden md:flex items-center gap-1">
-            {links.map((link) => (
-              <Link
-                key={link.to}
-                to={link.to}
-                className="relative px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {link.label}
-                {location.pathname === link.to && (
-                  <motion.div
-                    layoutId="nav-active"
-                    className="absolute inset-0 rounded-md bg-primary/10"
-                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                  />
-                )}
-              </Link>
-            ))}
+            {links.map((link) => 
+              link.external ? (
+                <a
+                  key={link.to}
+                  href={link.to}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  className="relative px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {link.label}
+                  {location.pathname === link.to && (
+                    <motion.div
+                      layoutId="nav-active"
+                      className="absolute inset-0 rounded-md bg-primary/10"
+                      transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                    />
+                  )}
+                </Link>
+              )
+            )}
           </div>
 
           {/* Mobile toggle */}
@@ -66,20 +79,32 @@ const Navbar = () => {
             className="md:hidden glass-strong border-b border-border/30 overflow-hidden"
           >
             <div className="container mx-auto px-4 py-4 flex flex-col gap-2">
-              {links.map((link) => (
-                <Link
-                  key={link.to}
-                  to={link.to}
-                  onClick={() => setOpen(false)}
-                  className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-                    location.pathname === link.to
-                      ? "bg-primary/10 text-foreground"
-                      : "text-muted-foreground hover:text-foreground"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {links.map((link) =>
+                link.external ? (
+                  <a
+                    key={link.to}
+                    href={link.to}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 rounded-md text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.to}
+                    to={link.to}
+                    onClick={() => setOpen(false)}
+                    className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                      location.pathname === link.to
+                        ? "bg-primary/10 text-foreground"
+                        : "text-muted-foreground hover:text-foreground"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                )
+              )}
             </div>
           </motion.div>
         )}

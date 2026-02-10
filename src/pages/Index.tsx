@@ -33,9 +33,9 @@ const Index = () => {
             </motion.p>
 
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6">
-              <span className="gradient-text">Developer</span>
+              <span className="gradient-text">Naresh R</span>
               <br />
-              <span className="text-foreground">Name</span>
+              <span className="text-foreground"></span>
             </h1>
 
             <motion.p

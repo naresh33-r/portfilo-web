@@ -1,15 +1,8 @@
-import { useCallback, useMemo, useEffect, useState } from "react";
+import { useMemo } from "react";
 import Particles from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
-import type { Engine } from "@tsparticles/engine";
 
 const ParticleBackground = () => {
-  const [init, setInit] = useState(false);
-
-  useEffect(() => {
-    loadSlim(undefined as unknown as Engine).then(() => setInit(true)).catch(() => setInit(true));
-  }, []);
-
   const options = useMemo(
     () => ({
       fullScreen: { enable: false },
@@ -49,10 +42,12 @@ const ParticleBackground = () => {
     []
   );
 
-  if (!init) return null;
+  // Preload particles engine
+  loadSlim(undefined as any).catch(() => {});
 
   return (
     <Particles
+      id="tsparticles"
       className="fixed inset-0 -z-10"
       options={options as any}
     />
