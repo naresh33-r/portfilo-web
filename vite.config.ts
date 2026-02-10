@@ -13,6 +13,7 @@ export default defineConfig(({ mode }) => ({
     },
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+  base: "/portfilo-web-app/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
