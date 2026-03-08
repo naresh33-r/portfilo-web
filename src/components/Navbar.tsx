@@ -8,10 +8,14 @@ const links = [
   { to: "/about", label: "About" },
   { to: "/projects", label: "Projects" },
   { to: "/skills", label: "Skills" },
-  { to: "/articles", label: "Articles" },
+  
+
   { to: "/profiles", label: "Profiles" },
-  { to: "/contact", label: "Contact" },
+  { to: "/Contact", label: "Contact" },
+ 
   { to: "/naresh R.pdf", label: "Resume", external: true },
+   
+
 ];
 
 const Navbar = () => {

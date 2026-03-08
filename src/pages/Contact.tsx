@@ -98,7 +98,7 @@ const Contact = () => {
                   {[
                     { icon: <Github size={20} />, href: "https://github.com" },
                     { icon: <Linkedin size={20} />, href: "https://linkedin.com" },
-                    { icon: <Mail size={20} />, href: "mailto:hello@example.com" },
+                    { icon: <Mail size={20} />, href: "nareshmarquez448@gmail.com" },
                   ].map((social, i) => (
                     <a
                       key={i}
