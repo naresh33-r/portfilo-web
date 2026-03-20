@@ -27,7 +27,7 @@ const About = () => {
           {/* Profile Photo */}
           <ScrollReveal delay={0.05}>
             <div className="mb-16">
-              <ProfilePhoto imageSrc="IMG-20250510-WA0013.jpg" alt="Profile" />
+              <ProfilePhoto imageSrc="/IMG-20250510-WA0013.jpg" alt="Profile" />
             </div>
           </ScrollReveal>
 
