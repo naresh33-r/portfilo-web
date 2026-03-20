@@ -10,7 +10,7 @@ export const profiles: CodingProfile[] = [
   {
     name: "GitHub",
     icon: "github",
-    url: "https://github.com",
+    url: "https://github.com/naresh33-r",
     color: "#7c3aed",
     description: "Open source contributions & projects",
   },

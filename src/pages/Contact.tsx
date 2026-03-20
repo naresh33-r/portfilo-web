@@ -96,9 +96,9 @@ const Contact = () => {
               <div className="mt-10 text-center space-y-4">
                 <div className="flex justify-center gap-4">
                   {[
-                    { icon: <Github size={20} />, href: "https://github.com" },
-                    { icon: <Linkedin size={20} />, href: "https://linkedin.com" },
-                    { icon: <Mail size={20} />, href: "nareshmarquez448@gmail.com" },
+                    { icon: <Github size={20} />, href: "https://github.com/naresh33-r" },
+                    { icon: <Linkedin size={20} />, href: "https://linkedin.com/in/naresh448" },
+                    { icon: <Mail size={20} />, href: "mailto:nareshmarquez448@gmail.com" },
                   ].map((social, i) => (
                     <a
                       key={i}
