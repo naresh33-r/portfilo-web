@@ -11,7 +11,7 @@ export interface Article {
 export const articles: Article[] = [
   {
     id: "1",
-    title: "Building Scalable React Applications",
+    title: "AI DeepFake Detector",
     description: "A deep dive into patterns and best practices for scaling React apps with proper state management and code splitting.",
     date: "2025-12-15",
     readTime: "8 min read",

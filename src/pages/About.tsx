@@ -35,7 +35,7 @@ const About = () => {
           <ScrollReveal delay={0.1}>
             <div className="glass rounded-2xl p-8 md:p-12 mb-16 max-w-3xl mx-auto gradient-border">
               <p className="text-foreground/90 leading-relaxed text-lg">
-                I am a final-year Computer Science student focused on backend development using Java and Spring Boot. I have a strong foundation in OOP, Data Structures, and SQL, and I enjoy building scalable and structured applications.
+                I am a Junior Software Developer focused on backend development using Java and Spring Boot. I have a strong foundation in OOP, Data Structures, and SQL, and I enjoy building scalable and structured applications.
               </p>
             </div>
           </ScrollReveal>
