@@ -13,7 +13,7 @@ const links = [
   { to: "/profiles", label: "Profiles" },
   { to: "/Contact", label: "Contact" },
  
-  { to: "/naresh R.pdf", label: "Resume", external: true },
+  { to: "/Naresh Resume_2026.pdf", label: "Resume", external: true },
    
 
 ];
